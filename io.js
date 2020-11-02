@@ -17,4 +17,14 @@ async function readLinesFromFile(filename) {
   return lines
 }
 
-module.exports = { readLinesFromFile }
+// Async function
+function writeFileFromLines({ filename, lines }) {
+  return new Promise(resolve => {
+    fs.writeFile(filename, lines.join('\n'), resolve)
+  })
+}
+
+module.exports = {
+  readLinesFromFile,
+  writeFileFromLines,
+}
