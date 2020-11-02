@@ -1,8 +1,8 @@
 (async function main() {
-  const { getLinesFromFile } = require('./io')
+  const { readLinesFromFile } = require('./io')
   const { shuffle } = require('./algorithms')
 
-  const input = await getLinesFromFile('input.txt')
+  const input = await readLinesFromFile('input.txt')
   const shuffledInput = shuffle(input)
 
   console.log(shuffledInput)

@@ -1,7 +1,7 @@
 const fs = require('fs')
 const readline = require('readline')
 
-async function getLinesFromFile(filename) {
+async function readLinesFromFile(filename) {
   const fileStream = fs.createReadStream(filename)
   const rl = readline.createInterface({
     input: fileStream,
@@ -17,4 +17,4 @@ async function getLinesFromFile(filename) {
   return lines
 }
 
-module.exports = { getLinesFromFile }
+module.exports = { readLinesFromFile }
