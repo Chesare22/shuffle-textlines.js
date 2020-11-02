@@ -18,4 +18,3 @@ async function getLinesFromFile(filename) {
 }
 
 module.exports = { getLinesFromFile }
-// export getLinesFromFile
