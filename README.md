@@ -16,21 +16,21 @@ node shuffle-textlines.js albums.txt
 
 ### Input file: _albums.txt_
 ```
-Modern Life is Rubbish — Blur
-Brothers — The Black Keys
-Songs From the Big Chair — Tears for Fears
-Permanent Waves — Rush
-Entre el Cielo y el Suelo — Mecano
-Fragile — Yes
-Selling England by the Pound — Genesis
 A Farewell to Kings — Rush
+A Hard Day's Night — The Beatles
 Ammonia Avenue — The Alan Parsons Project
 Atom Heart Mother — Pink Floyd
-A Hard Day's Night — The Beatles
-Turn on the Bright Lights — Interpol
-Mirage — Camel
+Brothers — The Black Keys
 Business as Usual — Men At Work
 Crime of the Century — Supertramp
+Entre el Cielo y el Suelo — Mecano
+Fragile — Yes
+Mirage — Camel
+Modern Life is Rubbish — Blur
+Permanent Waves — Rush
+Selling England by the Pound — Genesis
+Songs From the Big Chair — Tears for Fears
+Turn on the Bright Lights — Interpol
 ```
 
 ### Output file: _output.txt_
