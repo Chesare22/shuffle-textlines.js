@@ -24,7 +24,16 @@ function writeFileFromLines({ filename, lines }) {
   })
 }
 
+function getFilenames() {
+  const args = process.argv.slice(2)
+  return {
+    input: args[0] || 'input.txt',
+    output: args[1] || 'output.txt',
+  }
+}
+
 module.exports = {
   readLinesFromFile,
   writeFileFromLines,
+  getFilenames,
 }

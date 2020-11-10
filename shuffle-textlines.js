@@ -2,14 +2,16 @@
   const {
     readLinesFromFile,
     writeFileFromLines,
+    getFilenames,
   } = require('./io')
   const { shuffle } = require('./algorithms')
 
-  const input = await readLinesFromFile('input.txt')
+  const filenames = getFilenames()
+  const input = await readLinesFromFile(filenames.input)
   const shuffledInput = shuffle(input)
 
   writeFileFromLines({
-    filename: 'output.txt',
+    filename: filenames.output,
     lines: shuffledInput,
   })
 })()
