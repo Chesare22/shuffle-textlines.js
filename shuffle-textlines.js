@@ -1,17 +1,16 @@
-(async function main() {
-  const {
-    readLinesFromFile,
-    writeFileFromLines,
-    getFilenames,
-  } = require('./io')
-  const { shuffle } = require('./algorithms')
+const {
+  readLinesFromFile,
+  writeFileFromLines,
+  getFilenames,
+} = require('./io')
+const { shuffle } = require('./algorithms')
 
-  const filenames = getFilenames()
-  const input = await readLinesFromFile(filenames.input)
-  const shuffledInput = shuffle(input)
+const {input, output} = getFilenames()
 
-  writeFileFromLines({
-    filename: filenames.output,
-    lines: shuffledInput,
-  })
-})()
+readLinesFromFile(input)
+  .then(shuffle)
+  .then(shuffled => writeFileFromLines({
+    filename: output,
+    lines: shuffled
+    })
+  )
