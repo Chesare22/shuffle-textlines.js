@@ -5,10 +5,10 @@ async function readLinesFromFile(filename) {
   const fileStream = fs.createReadStream(filename)
   const rl = readline.createInterface({
     input: fileStream,
+    // This crlfDelay configuration recognizes all instances of CRLF
+    // as a single line break.
     crlfDelay: Infinity,
   })
-  // Note: we use the crlfDelay option to recognize all instances of CR LF
-  // ('\r\n') in input.txt as a single line break.
 
   const lines = []
   for await (const line of rl) {
@@ -17,7 +17,6 @@ async function readLinesFromFile(filename) {
   return lines
 }
 
-// Async function
 function writeFileFromLines({ filename, lines }) {
   return new Promise(resolve => {
     fs.writeFile(filename, lines.join('\n'), resolve)
